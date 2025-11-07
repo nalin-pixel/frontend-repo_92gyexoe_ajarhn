@@ -1,38 +1,22 @@
-import React from 'react';
-import { Mail, Github, Linkedin } from 'lucide-react';
-
-const EMAIL = 'fitra@example.com';
-const GITHUB_URL = 'https://github.com/your-github';
-const LINKEDIN_URL = 'https://www.linkedin.com/in/your-linkedin/';
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative w-full bg-gradient-to-b from-slate-950 to-slate-900 py-20 text-white">
-      <div className="mx-auto max-w-4xl px-6 text-center">
-        <h2 className="font-display text-3xl font-semibold md:text-4xl">Mari Berkolaborasi</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-slate-300">
-          Tertarik bekerja sama? Saya senang berdiskusi tentang proyek, kolaborasi, atau peluang kerja baru.
-        </p>
+    <section id="contact" className="relative w-full py-20 md:py-28">
+      <div className="mx-auto w-[92%] max-w-3xl text-center">
+        <h2 className="text-2xl md:text-4xl font-bold text-white">Let’s build something delightful</h2>
+        <p className="mt-3 text-slate-300/90">Open to freelance and collaborations. I respond within 24 hours.</p>
 
-        <div className="mx-auto mt-8 max-w-md overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur">
-          <div className="flex items-start gap-4">
-            <div className="rounded-xl bg-cyan-500/20 p-3 text-cyan-300">
-              <Mail className="h-5 w-5" />
-            </div>
-            <div>
-              <p className="text-sm text-slate-400">Hubungi via Email</p>
-              <a href={`mailto:${EMAIL}`} className="text-lg font-semibold text-white hover:underline">{EMAIL}</a>
-            </div>
-          </div>
-
-          <div className="mt-6 flex items-center gap-3">
-            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-white backdrop-blur transition hover:bg-white/10">
-              <Github className="h-4 w-4" /> GitHub
-            </a>
-            <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-white backdrop-blur transition hover:bg-white/10">
-              <Linkedin className="h-4 w-4" /> LinkedIn
-            </a>
-          </div>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="mailto:hello@fitrarizky.dev" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 px-5 py-3 font-medium text-white shadow-lg shadow-indigo-500/20 transition hover:scale-[1.02]">
+            <Mail size={18} /> Email Me
+          </a>
+          <a href="#" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-3 font-medium text-white/90 hover:text-white transition">
+            <Github size={18} /> GitHub
+          </a>
+          <a href="#" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-3 font-medium text-white/90 hover:text-white transition">
+            <Linkedin size={18} /> LinkedIn
+          </a>
         </div>
       </div>
     </section>

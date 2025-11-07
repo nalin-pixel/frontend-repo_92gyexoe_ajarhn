@@ -1,70 +1,70 @@
-import React from 'react';
-import { ExternalLink, Workflow, Cpu, Smartphone } from 'lucide-react';
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: 'Complex SPA Dashboard',
-    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop',
-    role: 'Saya bertanggung jawab penuh untuk implementasi UI menggunakan React Hooks, Context API, dan optimisasi render.',
-    tech: ['React', 'Tailwind', 'Chart.js', 'Vite'],
-    problem: 'Membangun dashboard SPA kompleks dengan data real-time dan grafik interaktif.',
-    url: 'https://example.com/dashboard',
-    icon: Workflow,
+    title: "Motion Commerce",
+    role: "Front-End Lead",
+    about: "E-commerce with immersive motion and blazing-fast UX.",
+    tech: ["React", "Tailwind", "Framer Motion"],
+    demo: "#",
+    repo: "#",
+    image: "https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1600&auto=format&fit=crop"
   },
   {
-    title: 'Mobile-First E-commerce',
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop',
-    role: 'Mengimplementasikan desain mobile-first, lazy-loading gambar, dan optimasi LCP untuk kecepatan tinggi.',
-    tech: ['React', 'SWR', 'Tailwind', 'Cloudinary'],
-    problem: 'Menghadirkan pengalaman belanja cepat dengan performa prima di perangkat mobile.',
-    url: 'https://example.com/ecommerce',
-    icon: Smartphone,
+    title: "Spline Playground",
+    role: "Creative Developer",
+    about: "Interactive 3D hero sections using Spline.",
+    tech: ["Spline", "Vite", "GLTF"],
+    demo: "#",
+    repo: "#",
+    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1600&auto=format&fit=crop"
   },
   {
-    title: 'API Integrations Explorer',
-    image: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop',
-    role: 'Mendesain arsitektur front-end untuk integrasi RESTful/GraphQL dan state management yang efisien.',
-    tech: ['React', 'GraphQL', 'Apollo', 'Tailwind'],
-    problem: 'Mengintegrasikan berbagai API dengan caching cerdas dan error handling yang robust.',
-    url: 'https://example.com/api-explorer',
-    icon: Cpu,
-  },
+    title: "Portfolio Awwwards",
+    role: "Front-End",
+    about: "Awwwards-level portfolio with micro-interactions.",
+    tech: ["React", "Tailwind", "shadcn"],
+    demo: "#",
+    repo: "#",
+    image: "https://images.unsplash.com/photo-1557264337-e8a93017fe92?q=80&w=1600&auto=format&fit=crop"
+  }
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full bg-slate-950 py-20 text-white">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex items-end justify-between gap-4">
-          <div>
-            <h2 className="font-display text-3xl font-semibold md:text-4xl">Proyek Terbaik</h2>
-            <p className="mt-2 max-w-2xl text-slate-300">Contoh karya yang menonjolkan kemampuan membangun SPA kompleks, desain mobile-first, dan integrasi API.</p>
-          </div>
-          <a href="#contact" className="hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white backdrop-blur transition hover:bg-white/10 md:inline-block">Ajak Kolaborasi</a>
+    <section id="projects" className="relative w-full py-20 md:py-28">
+      <div className="mx-auto w-[92%] max-w-7xl">
+        <div className="mb-10 md:mb-14">
+          <h2 className="text-2xl md:text-4xl font-bold text-white">Selected Projects</h2>
+          <p className="mt-2 text-slate-300/90">A mix of product work and playful experiments.</p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
           {projects.map((p) => (
-            <article key={p.title} className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
+            <article key={p.title} className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition">
               <div className="relative aspect-[16/10] overflow-hidden">
-                <img src={p.image} alt={p.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-              </div>
-              <div className="p-6">
-                <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-white/10 px-2 py-1 text-xs text-slate-200">
-                  <p.icon className="h-4 w-4" />
-                  <span>{p.title}</span>
+                <img src={p.image} alt={p.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/70" />
+                <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-black/40 px-3 py-1 text-xs text-white backdrop-blur">
+                  {p.role}
                 </div>
-                <p className="text-sm text-slate-300">{p.role}</p>
-                <p className="mt-2 text-sm text-slate-400">Problem solved: {p.problem}</p>
+              </div>
+              <div className="p-5 md:p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-white">{p.title}</h3>
+                <p className="mt-2 text-sm text-slate-300/90">{p.about}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {p.tech.map((t) => (
-                    <span key={t} className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{t}</span>
+                    <span key={t} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-slate-200">{t}</span>
                   ))}
                 </div>
-                <a href={p.url} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300">
-                  Lihat Proyek <ExternalLink className="h-4 w-4" />
-                </a>
+                <div className="mt-5 flex items-center gap-3">
+                  <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/20 transition">
+                    <ExternalLink size={16} /> Demo
+                  </a>
+                  <a href={p.repo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/20 transition">
+                    <Github size={16} /> Code
+                  </a>
+                </div>
               </div>
             </article>
           ))}

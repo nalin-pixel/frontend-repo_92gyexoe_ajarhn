@@ -1,22 +1,24 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 export default function App() {
+  const year = new Date().getFullYear();
   return (
-    <div className="min-h-screen bg-slate-950 font-sans text-white" id="home">
+    <div className="min-h-screen bg-slate-950 text-slate-100 antialiased">
       <Navbar />
+      <Hero />
       <main>
-        <Hero />
         <Skills />
         <Projects />
         <Contact />
       </main>
-      <footer className="border-t border-white/10 bg-slate-950 py-10 text-center text-sm text-white/60">
-        © {new Date().getFullYear()} Fitra Rizky Oktarian — Crafted with React, Tailwind & Spline.
+      <footer className="border-t border-white/10 py-10">
+        <div className="mx-auto w-[92%] max-w-7xl text-center text-sm text-slate-400">
+          © {year} Fitra Rizky Oktarian · Built with React, Vite, Tailwind & Spline
+        </div>
       </footer>
     </div>
   );
