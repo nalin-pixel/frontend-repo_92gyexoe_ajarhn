@@ -1,6 +1,6 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
-import { Rocket, ExternalLink, Github, Linkedin } from 'lucide-react';
+import { Rocket, ExternalLink, Github, Linkedin, Star } from 'lucide-react';
 
 const NAME = 'Fitra Rizky Oktarian';
 const TAGLINE = 'Front-End Developer';
@@ -10,7 +10,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/your-linkedin/';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] w-full overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <section className="relative min-h-[92vh] w-full overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* 3D Spline Scene */}
       <div className="absolute inset-0">
         <Spline
@@ -57,6 +57,12 @@ export default function Hero() {
               <Linkedin className="h-5 w-5" />
             </a>
           </div>
+        </div>
+
+        {/* Micro social proof */}
+        <div className="mt-8 flex items-center gap-2 text-sm text-white/70">
+          <Star className="h-4 w-4 text-amber-300" />
+          <span>Mengutamakan aksesibilitas, performa, dan detail pixel-perfect</span>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 font-sans" id="home">
+    <div className="min-h-screen bg-slate-950 font-sans text-white" id="home">
       <Navbar />
       <main>
         <Hero />
@@ -16,7 +16,7 @@ export default function App() {
         <Contact />
       </main>
       <footer className="border-t border-white/10 bg-slate-950 py-10 text-center text-sm text-white/60">
-        © {new Date().getFullYear()} Fitra Rizky Oktarian. Dibuat dengan cinta, React & Tailwind.
+        © {new Date().getFullYear()} Fitra Rizky Oktarian — Crafted with React, Tailwind & Spline.
       </footer>
     </div>
   );
